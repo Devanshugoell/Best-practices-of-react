@@ -1,5 +1,5 @@
 import "./App.css";
-import FetchingData from "./FetchingData";
+import FetchingData from "./FetchingData/FetchingData";
 
 function App() {
   return (

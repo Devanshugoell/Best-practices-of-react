@@ -1,0 +1,14 @@
+.products {
+  width: 20%;
+  box-shadow: 0px 0px 3px 3px grey;
+  border-radius: 5px;
+}
+
+.pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.images {
+  width: 50px;
+}

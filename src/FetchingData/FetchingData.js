@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./FetchingData.css";
 
 const FetchingData = () => {
   const [data, setData] = useState();
@@ -21,14 +22,16 @@ const FetchingData = () => {
   return data ? (
     data.map((item) => {
       return (
-        <div key={item.id} className="products">
-          <h1>{item.title}</h1>
-          <p>{item.category}</p>
-          <img src={item.image} alt="product" />
-          <p>{item.description}</p>
-          <p>{item.rating.count}</p>
-          <p>{item.price} $</p>
-        </div>
+        <section className="pro">
+          <div key={item.id} className="products">
+            <h1>{item.title}</h1>
+            <p>{item.category}</p>
+            <img className="images" src={item.image} alt="product" />
+            <p>{item.description}</p>
+            <p>{item.rating.count}</p>
+            <p>{item.price} $</p>
+          </div>
+        </section>
       );
     })
   ) : (
