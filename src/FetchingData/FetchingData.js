@@ -21,15 +21,17 @@ const FetchingData = () => {
 
   return data ? (
     data.map((item) => {
+      const { id, title, category, description, rating, price } = item;
+
       return (
         <section className="pro">
-          <div key={item.id} className="products">
-            <h1>{item.title}</h1>
-            <p>{item.category}</p>
+          <div key={id} className="products">
+            <h1>{title}</h1>
+            <p>{category}</p>
             <img className="images" src={item.image} alt="product" />
-            <p>{item.description}</p>
-            <p>{item.rating.count}</p>
-            <p>{item.price} $</p>
+            <p>{description}</p>
+            <p>{rating.count}</p>
+            <p>{price} $</p>
           </div>
         </section>
       );
